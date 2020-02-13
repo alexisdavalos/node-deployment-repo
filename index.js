@@ -9,5 +9,6 @@ server.get("/", (req,res) => {
     res.status(200).json(songs);
 })
 
-const port = 4000;
+//make the port dynamic for deployment
+const port = process.env.PORT || 4000;
 server.listen(port, () => console.log(`\n*** Running on port ${port} ***\n`))
